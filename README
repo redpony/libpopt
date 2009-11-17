@@ -1,0 +1,48 @@
+OVERVIEW
+------------------------------------------------------------------------------
+libpopt provides implementations of a handful of commonly used
+gradient-based numerical optimization algorithms.  The implementation
+currently includes:
+
+* Stochastic gradient descent
+* LBFGS (J. Nocedal, 1980. Quasi-Newton Matrices with Limited Storage)
+* Rprop (M. Riedmiller, 1994. Rprop - Description and Implementation Details)
+
+The implementations are somewhat spare in terms of functionality, but the
+optimizer state can be serialized and persisted between function
+evaluations, making it possible to run different optimization steps in
+different processes or even on different machines (binary compatibility
+between the platforms is assumed).
+
+
+TODO
+------------------------------------------------------------------------------
+* provide alternative convergence tests
+* add richer interfaces to support algorithms that require more than simply
+  f(x) and f'(x).
+  - stochastic meta descent
+  - conjugate gradient descent
+  - LBFGS with l-1 regularization
+
+
+COPYRIGHT AND LICENSE
+------------------------------------------------------------------------------
+Copyright (c) 2009 by Chris Dyer <redpony@gmail.com>
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+The LBFGS implementation contains code from the Computational
+Crystallography Toolbox which is copyright (c) 2006 by The Regents of the
+University of California, through Lawrence Berkeley National Laboratory.
+For more information on their license, refer to http://cctbx.sourceforge.net/
+
