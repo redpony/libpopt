@@ -23,6 +23,9 @@ TODO
   - stochastic meta descent
   - conjugate gradient descent
   - LBFGS with l-1 regularization
+* better support for online learning methods
+  - algorithms should know if they support online methods
+  - online methods should (probably) support dynamic numbers of variables
 
 
 COPYRIGHT AND LICENSE

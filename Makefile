@@ -9,5 +9,5 @@ clean:
 libpopt.a: optimize.o
 	$(AR) rcs libpopt.a optimize.o
 
-optimize_test: optimize_test.o
+optimize_test: optimize_test.o libpopt.a
 	$(CXX) optimize_test.o libpopt.a -o optimize_test
